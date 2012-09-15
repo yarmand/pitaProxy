@@ -3,7 +3,7 @@ require("log4js");
 
 var trafficLeft = 0;
 var monthlyTraffic = 13 * 1024 * 1024 * 1024; //13GB
-var targetHost = "movies.netflix.com";
+var targetHost = "moviecontrol.netflix.com";
 var connectionCounter = 0;
 
 function forwardOnPort(port){
@@ -14,7 +14,7 @@ function forwardOnPort(port){
       //forward to internal sorry http server
       outCon = net.createConnection(3000, "127.0.0.1");
     } else {
-      //forward to youtube 
+      //forward to target 
       outCon = net.createConnection(port, targetHost);
     }
     
@@ -73,3 +73,5 @@ recalculateTraffic();
 setInterval(function(){
   console.log(trafficLeft + " bytes traffic left");
 }, 1000 * 60);
+:w
+
