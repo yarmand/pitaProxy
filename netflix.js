@@ -73,5 +73,4 @@ recalculateTraffic();
 setInterval(function(){
   console.log(trafficLeft + " bytes traffic left");
 }, 1000 * 60);
-:w
 
