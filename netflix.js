@@ -3,7 +3,7 @@ require("log4js");
 
 var trafficLeft = 0;
 var monthlyTraffic = 13 * 1024 * 1024 * 1024; //13GB
-var targetHost = "www.netflix.com";
+var targetHost = "movies.netflix.com";
 var connectionCounter = 0;
 
 function forwardOnPort(port){
